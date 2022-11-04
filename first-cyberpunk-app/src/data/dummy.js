@@ -1,14 +1,6 @@
 import React from "react";
+import { AiOutlineBarChart, AiOutlineStock } from "react-icons/ai";
 import {
-  AiOutlineCalendar,
-  AiOutlineShoppingCart,
-  AiOutlineAreaChart,
-  AiOutlineBarChart,
-  AiOutlineStock,
-} from "react-icons/ai";
-import {
-  FiShoppingBag,
-  FiEdit,
   FiPieChart,
   FiBarChart,
   FiCreditCard,
@@ -16,20 +8,14 @@ import {
   FiShoppingCart,
 } from "react-icons/fi";
 import {
-  BsKanban,
-  BsBarChart,
   BsBoxSeam,
   BsCurrencyDollar,
   BsShield,
   BsChatLeft,
 } from "react-icons/bs";
-import { BiColorFill } from "react-icons/bi"; //Unused
-import { IoMdContacts } from "react-icons/io"; //Unused
-import { RiContactsLine, RiStockLine } from "react-icons/ri"; //Unused
 import { MdOutlineSupervisorAccount } from "react-icons/md";
 import { HiOutlineRefresh } from "react-icons/hi";
 import { TiTick } from "react-icons/ti";
-import { GiLouvrePyramid } from "react-icons/gi"; //Unused
 import { GrLocation } from "react-icons/gr";
 import { ReactComponent as BerserkIcon } from "./media/icons/berserk.svg"; //Ícono Berserk SO
 import { ReactComponent as CyberdeckIcon } from "./media/icons/cyberdeck.svg"; //Ícono Cyberdeck SO
@@ -45,11 +31,19 @@ import product4 from "./product4.jpg";
 import product5 from "./product5.jpg";
 import product6 from "./product6.jpg";
 import product7 from "./product7.jpg";
-import product8 from "./product8.jpg";
-import product12 from "./product12.jpg"
-import product13 from "./product13.jpg"
-import product14 from "./product14.jpg"
-import product15 from "./product15.jpg"
+
+//Cyberpunk items
+import product12 from "./product12.jpg";
+import product13 from "./product13.jpg";
+import product14 from "./product14.jpg";
+import product15 from "./product15.jpg";
+import product16 from "./product16.jpg";
+import product17 from "./product17.jpg";
+import product18 from "./product18.jpg";
+import product19 from "./product19.jpg";
+import product20 from "./product20.jpg";
+import product21 from "./product21.jpg";
+import product22 from "./product22.jpg";
 
 export const gridOrderImage = (props) => (
   <div>
@@ -61,7 +55,6 @@ export const gridOrderImage = (props) => (
   </div>
 );
 
-
 export const gridCyberIcons = (props) => (
   <div>
     <img
@@ -71,10 +64,6 @@ export const gridCyberIcons = (props) => (
     />
   </div>
 );
-
-
-
-
 
 export const gridOrderStatus = (props) => (
   <button
@@ -892,23 +881,16 @@ export const berserkGrid = [
   },
 ];
 
-
 export const cyberdeckGrid = [
   {
     headerText: "Icono",
-    template: "",
+    template: gridCyberIcons,
     textAlign: "Center",
     width: "120",
   },
   {
     field: "Title",
     headerText: "Titulo",
-    width: "150",
-    textAlign: "Center",
-  },
-  {
-    field: "Rarity",
-    headerText: "Rareza",
     width: "150",
     textAlign: "Center",
   },
@@ -924,7 +906,7 @@ export const cyberdeckGrid = [
 export const sandevistanGrid = [
   {
     headerText: "Icono",
-    template: "",
+    template: gridCyberIcons,
     textAlign: "Center",
     width: "120",
   },
@@ -948,8 +930,6 @@ export const sandevistanGrid = [
     textAlign: "Center",
   },
 ];
-
-
 
 export const ordersGrid = [
   {
@@ -2094,97 +2074,76 @@ export const employeesData = [
 
 export const berserkData = [
   {
-    
     ProductImage: product12,
     Title: "BioDyne Berserk Mk.1",
     Rarity: "Uncommon",
-    Berkserk: "To equip this item, you need 6 Body."
+    Berkserk: "To equip this item, you need 6 Body.",
   },
   {
-    
     ProductImage: product13,
     Title: "Militech Berserk Mk.5",
     Rarity: "	Legendary / Iconic",
-    Berkserk: "To equip this item, you need 18 Body."
+    Berkserk: "To equip this item, you need 18 Body.",
   },
   {
-    
     ProductImage: product14,
     Title: "	Moore Tech Berserk Mk.1",
     Rarity: "Uncommon",
-    Berkserk: "To equip this item, you need 6 Body."
+    Berkserk: "To equip this item, you need 6 Body.",
   },
   {
-    
     ProductImage: product15,
     Title: "Zetatech Berserk Mk.4",
     Rarity: "Legendary / Iconic",
-    Berkserk: "To equip this item, you need 16 Body."
+    Berkserk: "To equip this item, you need 16 Body.",
   },
-  {
-    
-    ProductImage: product12,
-    Title: "BioDyne Berserk Mk.1",
-    Rarity: "Uncommon",
-    Berkserk: "To equip this item, you need 6 Body."
-  },
-  {
-    
-    ProductImage: product13,
-    Title: "Militech Berserk Mk.5",
-    Rarity: "	Legendary / Iconic",
-    Berkserk: "To equip this item, you need 18 Body."
-  },
-  {
-    
-    ProductImage: product14,
-    Title: "	Moore Tech Berserk Mk.1",
-    Rarity: "Uncommon",
-    Berkserk: "To equip this item, you need 6 Body."
-  },
-  {
-    
-    ProductImage: product15,
-    Title: "Zetatech Berserk Mk.4",
-    Rarity: "Legendary / Iconic",
-    Berkserk: "To equip this item, you need 16 Body."
-  },
-  {
-    
-    ProductImage: product12,
-    Title: "BioDyne Berserk Mk.1",
-    Rarity: "Uncommon",
-    Berkserk: "To equip this item, you need 6 Body."
-  },
-  {
-    
-    ProductImage: product13,
-    Title: "Militech Berserk Mk.5",
-    Rarity: "	Legendary / Iconic",
-    Berkserk: "To equip this item, you need 18 Body."
-  },
-  {
-    
-    ProductImage: product14,
-    Title: "	Moore Tech Berserk Mk.1",
-    Rarity: "Uncommon",
-    Berkserk: "To equip this item, you need 6 Body."
-  },
-  {
-    
-    ProductImage: product15,
-    Title: "Zetatech Berserk Mk.4",
-    Rarity: "Legendary / Iconic",
-    Berkserk: "To equip this item, you need 16 Body."
-  }
-
-
-
 ];
 
-export const sandevistanData = [];
+export const sandevistanData = [
+  {
+    ProductImage: product16,
+    Title: "Dynalar Sandevistan Mk.2",
+    Rarity: "Rare",
+    Sandevistan: "Slows time to 25% for 12 sec. Cooldown 30 sec.",
+  },
+  {
+    ProductImage: product17,
+    Title: " Militech 'Falcon' Sandevistan Mk.5 ",
+    Rarity: "	Legendary / Iconic",
+    Sandevistan: "Increase any damage dealt by 15% when Sandevistan is active.",
+  },
+  {
+    ProductImage: product18,
+    Title: "	Zetatech Sandevistan Mk.3",
+    Rarity: "Epic",
+    Sandevistan: "Slows time to 50% for 16 sec. Cooldown 30 sec.",
+  },
+  {
+    ProductImage: product19,
+    Title: "QianT Sandevistan Mk.4",
+    Rarity: "Legendary",
+    Sandevistan: "Increases Crit Chance by 15% when Sandevistan is active.",
+  },
+];
 
-export const cyberdeckData = [];
+export const cyberdeckData = [
+  {
+    ProductImage: product20,
+    Title: "RAM Upgrade",
+    Cyberdeck: "To equip this item, you need 8/10/12 Intelligence.",
+  },
+  {
+    ProductImage: product21,
+    Title: " Self-ICE ",
+    Rarity: "	Legendary / Iconic",
+    Cyberdeck: "Negates effects of enemy quickhacks. Cooldown: 45 sec.",
+  },
+  {
+    ProductImage: product22,
+    Title: "Visual Cortex Support",
+    Cyberdeck: "Increases Crit Damage by 6/12/20/30%.",
+  },
+];
 
 export const ordersData = [
   {

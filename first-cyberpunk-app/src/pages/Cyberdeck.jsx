@@ -13,8 +13,12 @@ const Cyberdeck = () => {
     <div>
       <div className="m-2 md:10 p-2 md:p-10
     bg-white rounded-3xl">
-      <Header category = "Page" title = "Cyberdeck" subt="Lista Cyberware: Corteza Frontal" />
-      <GridComponent>
+      <Header category = "Pagina" title = "Cyberdeck" subt="Lista Cyberware: Corteza Frontal" />
+      <GridComponent
+            id = "gridComp"
+            dataSource={cyberdeckData}
+            allowPaging
+          >
         <ColumnsDirective>
           {cyberdeckGrid.map((item, index)=> (
             <ColumnDirective key= {index}

@@ -13,8 +13,12 @@ const Sandevistan = () => {
   return (
     <div className="m-2 md:10 p-2 md:p-10
     bg-white rounded-3xl">
-      <Header category = "Page" title = "Sandevistan" subt="Lista de Sistemas Operativos de Sandevistan" />
-      <GridComponent>
+      <Header category = "Pagina" title = "Sandevistan" subt="Lista de Sistemas Operativos de Sandevistan" />
+      <GridComponent
+            id = "gridComp"
+            dataSource={sandevistanData}
+            allowPaging
+          >
         <ColumnsDirective>
           {sandevistanGrid.map((item, index)=> (
             <ColumnDirective key= {index}
