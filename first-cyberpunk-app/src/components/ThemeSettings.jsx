@@ -32,7 +32,7 @@ const ThemeSettings = () => {
               type="radio"
               id="light"
               name="theme"
-              value="Light"
+              value="Claro"
               className="cursor-pointer"
               onChange={setMode}
               checked={currentMode === 'Light'}
@@ -47,7 +47,7 @@ const ThemeSettings = () => {
               type="radio"
               id="dark"
               name="theme"
-              value="Dark"
+              value="Oscuro"
               onChange={setMode}
               className="cursor-pointer"
               checked={currentMode === 'Dark'}
@@ -59,7 +59,7 @@ const ThemeSettings = () => {
           </div>
         </div>
         <div className="p-4 border-t-1 border-color ml-4">
-          <p className="font-semibold text-xl ">Theme Colors</p>
+          <p className="font-semibold text-xl ">Temas de colores</p>
           <div className="flex gap-3">
             {themeColors.map((item, index) => (
               <TooltipComponent key={index} content={item.name} position="TopCenter">
