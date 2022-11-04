@@ -24,8 +24,8 @@ const Sidebar = () => {
       {activeMenu && (
         <>
           <div className="flex justify-between items-center">
-            <Link to="/" onClick={handleCloseSideBar} className="items-center gap-3 ml-3 mt-4 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
-            <ErLogo className="flex space-x-4 w-20 h-20"/> <span> EDGERUNNERS </span>
+            <Link to="/" onClick={handleCloseSideBar} className="items-center gap-0 ml-0 mt-6 flex text-xl font-extrabold tracking-tight dark:text-white text-slate-900">
+            <ErLogo className="flex space-x-4 w-20 h-20 "/> <span> EDGERUNNERS </span>
             </Link>
             <TooltipComponent content="Menu" position="BottomCenter">
               <button
