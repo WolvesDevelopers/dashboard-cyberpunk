@@ -70,7 +70,7 @@ const App = () => {
               {/*Charts */}
               <Route path="/Manufactura" element={<Manufacturer />} />
               <Route path="/Rareza" element={<Rarity />} />
-              <Route path="/Comparativa" element={<Comparison />} />
+              <Route path="/Tipo" element={<Comparison />} />
             </Routes>
           </div>
         </div>

@@ -62,14 +62,10 @@ const Navbar = () => {
   return (
     <div> { BurButton(activeMenu,handleActiveMenu,currentColor) } </div>
     /*<div className="flex justify-between p-2 md:ml-6 md:mr-6 relative">
-        
       <NavButton title="Menu" customFunc={handleActiveMenu} color={currentColor} icon={<AiOutlineMenu />} />
-      
       <div className="flex">
-        
-
       </div>
-    </div>*/
+    </div>*/  //Unused code: Makes the burgerbutton constant.
   );
 };
 
