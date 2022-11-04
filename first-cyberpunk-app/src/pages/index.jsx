@@ -1,17 +1,10 @@
-export { default as Ecommerce } from './Ecommerce';
-export { default as Kanban } from './Charts/Kanban';
-export { default as Orders } from './Charts/Orders';
-export { default as Employees } from './Employees';
-export { default as Editor } from './Editor';
+export { default as Homepage } from './Homepage';
+export { default as Sandevistan } from './Sandevistan';
+export { default as Berserk } from './Berserk';
 export { default as Customers } from './Customers';
 export { default as ColorPicker } from './ColorPicker';
-export { default as Calendar } from './Calendar';
-export { default as Area } from './Charts/Area';
-export { default as Bar } from './Charts/Bar';
-export { default as ColorMapping } from './Charts/ColorMapping';
-export { default as Financial } from './Charts/Financial';
-export { default as Line } from './Charts/Line';
-export { default as Pie } from './Charts/Pie';
-export { default as Pyramid } from './Charts/Pyramid';
-export { default as Stacked } from './Charts/Stacked';
+export { default as Cyberdeck } from './Cyberdeck';
+export { default as Rarity } from './Charts/Rarity';
+export { default as Comparison } from './Charts/Comparison';
+export { default as Manufacturer } from './Charts/Manufacturer';
 

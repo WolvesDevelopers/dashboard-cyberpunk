@@ -2,14 +2,17 @@ import React from 'react';
 import { AiOutlineCalendar, AiOutlineShoppingCart, AiOutlineAreaChart, AiOutlineBarChart, AiOutlineStock } from 'react-icons/ai';
 import { FiShoppingBag, FiEdit, FiPieChart, FiBarChart, FiCreditCard, FiStar, FiShoppingCart } from 'react-icons/fi';
 import { BsKanban, BsBarChart, BsBoxSeam, BsCurrencyDollar, BsShield, BsChatLeft } from 'react-icons/bs';
-import { BiColorFill } from 'react-icons/bi';
-import { IoMdContacts } from 'react-icons/io';
-import { RiContactsLine, RiStockLine } from 'react-icons/ri';
+import { BiColorFill } from 'react-icons/bi'; //Unused
+import { IoMdContacts } from 'react-icons/io'; //Unused
+import { RiContactsLine, RiStockLine } from 'react-icons/ri'; //Unused
 import { MdOutlineSupervisorAccount } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { TiTick } from 'react-icons/ti';
-import { GiLouvrePyramid } from 'react-icons/gi';
+import { GiLouvrePyramid } from 'react-icons/gi'; //Unused
 import { GrLocation } from 'react-icons/gr';
+import { ReactComponent as BerserkIcon } from './media/icons/berserk.svg'; //Ícono Berserk SO
+import { ReactComponent as CyberdeckIcon } from './media/icons/cyberdeck.svg'; //Ícono Cyberdeck SO
+import { ReactComponent as SandevistanIcon } from './media/icons/sandevistan.svg'; //Ícono Sandevistan SO
 import avatar from './avatar.jpg';
 import avatar2 from './avatar2.jpg';
 import avatar3 from './avatar3.png';
@@ -372,20 +375,20 @@ export const FinancialPrimaryYAxis = {
 };
 
 export const LinePrimaryXAxis = {
-  valueType: 'DateTime',
+  valueType: 'Category',
   labelFormat: 'y',
-  intervalType: 'Years',
+  intervalType: '',
   edgeLabelPlacement: 'Shift',
   majorGridLines: { width: 0 },
   background: 'white',
 };
 
 export const LinePrimaryYAxis = {
-  labelFormat: '{value}%',
+  labelFormat: '{value}',
   rangePadding: 'None',
   minimum: 0,
-  maximum: 100,
-  interval: 20,
+  maximum: 10,
+  interval: 1,
   lineStyle: { width: 0 },
   majorTickLines: { width: 0 },
   minorTickLines: { width: 0 },
@@ -471,88 +474,36 @@ export const employeesGrid = [
 
 export const links = [
   {
-    title: 'Dashboard',
+    title: 'Tablas de datos',
     links: [
       {
-        name: 'ecommerce',
-        icon: <FiShoppingBag />,
-      },
-    ],
-  },
-
-  {
-    title: 'Pages',
-    links: [
-      {
-        name: 'orders',
-        icon: <AiOutlineShoppingCart />,
+        name: 'Berserk',
+        icon: <BerserkIcon className="flex space-x-2 w-12 h-12"/>,
       },
       {
-        name: 'employees',
-        icon: <IoMdContacts />,
+        name: 'Cyberdeck',
+        icon: <CyberdeckIcon className="flex space-x-2 w-12 h-12"/>,
       },
       {
-        name: 'customers',
-        icon: <RiContactsLine />,
+        name: 'Sandevistan',
+        icon: <SandevistanIcon className="flex space-x-2 w-12 h-12"/>,
       },
     ],
   },
   {
-    title: 'Apps',
+    title: 'Estadísticas',
     links: [
       {
-        name: 'calendar',
-        icon: <AiOutlineCalendar />,
+        name: 'Rareza',
+        icon: <AiOutlineStock className="flex space-x-2 w-12 h-12"/>,
       },
       {
-        name: 'kanban',
-        icon: <BsKanban />,
+        name: 'Manufactura',
+        icon: <AiOutlineBarChart className="flex space-x-2 w-12 h-12"/>,
       },
       {
-        name: 'editor',
-        icon: <FiEdit />,
-      },
-      {
-        name: 'color-picker',
-        icon: <BiColorFill />,
-      },
-    ],
-  },
-  {
-    title: 'Charts',
-    links: [
-      {
-        name: 'line',
-        icon: <AiOutlineStock />,
-      },
-      {
-        name: 'area',
-        icon: <AiOutlineAreaChart />,
-      },
-
-      {
-        name: 'bar',
-        icon: <AiOutlineBarChart />,
-      },
-      {
-        name: 'pie',
-        icon: <FiPieChart />,
-      },
-      {
-        name: 'financial',
-        icon: <RiStockLine />,
-      },
-      {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
-        name: 'pyramid',
-        icon: <GiLouvrePyramid />,
-      },
-      {
-        name: 'stacked',
-        icon: <AiOutlineBarChart />,
+        name: 'Varianza',
+        icon: <FiPieChart className="flex space-x-2 w-12 h-12"/>,
       },
     ],
   },
@@ -3041,32 +2992,68 @@ export const scheduleData = [
 
 export const lineChartData = [
   [
-    { x: new Date(2005, 0, 1), y: 21 },
-    { x: new Date(2006, 0, 1), y: 24 },
-    { x: new Date(2007, 0, 1), y: 36 },
-    { x: new Date(2008, 0, 1), y: 38 },
-    { x: new Date(2009, 0, 1), y: 54 },
-    { x: new Date(2010, 0, 1), y: 57 },
-    { x: new Date(2011, 0, 1), y: 70 },
+    { x: 'Arasaka', y: 0 },
+    { x: 'BioDyne', y: 4 },
+    { x: 'Biotech Σ', y: 0 },
+    { x: 'Dylanar', y: 0 },
+    { x: 'Fuyutsuki', y: 0 },
+    { x: 'Militech', y: 1 },
+    { x: 'Moore Tech', y: 3 },
+    { x: 'NetWatch', y: 0 },
+    { x: 'QianT', y: 0 },
+    { x: 'Raven MicroCyber', y: 0 },
+    { x: 'Seocho Electronics', y: 0 },
+    { x: 'Stephenson Tech', y: 0 },
+    { x: 'Tetratronic', y: 0 },
+    { x: 'Zetatech', y: 2 },
   ],
   [
-    { x: new Date(2005, 0, 1), y: 28 },
-    { x: new Date(2006, 0, 1), y: 44 },
-    { x: new Date(2007, 0, 1), y: 48 },
-    { x: new Date(2008, 0, 1), y: 50 },
-    { x: new Date(2009, 0, 1), y: 66 },
-    { x: new Date(2010, 0, 1), y: 78 },
-    { x: new Date(2011, 0, 1), y: 84 },
+    { x: 'Arasaka', y: 2 },
+    { x: 'BioDyne', y: 2 },
+    { x: 'Biotech Σ', y: 3 },
+    { x: 'Dylanar', y: 0 },
+    { x: 'Fuyutsuki', y: 2 },
+    { x: 'Militech', y: 1 },
+    { x: 'Moore Tech', y: 0 },
+    { x: 'NetWatch', y: 1 },
+    { x: 'QianT', y: 0 },
+    { x: 'Raven MicroCyber', y: 2 },
+    { x: 'Seocho Electronics', y: 2 },
+    { x: 'Stephenson Tech', y: 3 },
+    { x: 'Tetratronic', y: 4 },
+    { x: 'Zetatech', y: 0 },
   ],
-
   [
-    { x: new Date(2005, 0, 1), y: 10 },
-    { x: new Date(2006, 0, 1), y: 20 },
-    { x: new Date(2007, 0, 1), y: 30 },
-    { x: new Date(2008, 0, 1), y: 39 },
-    { x: new Date(2009, 0, 1), y: 50 },
-    { x: new Date(2010, 0, 1), y: 70 },
-    { x: new Date(2011, 0, 1), y: 100 },
+    { x: 'Arasaka', y: 0 },
+    { x: 'BioDyne', y: 0 },
+    { x: 'Biotech Σ', y: 0 },
+    { x: 'Dylanar', y: 4 },
+    { x: 'Fuyutsuki', y: 0 },
+    { x: 'Militech', y: 1 },
+    { x: 'Moore Tech', y: 0 },
+    { x: 'NetWatch', y: 0 },
+    { x: 'QianT', y: 2 },
+    { x: 'Raven MicroCyber', y: 0 },
+    { x: 'Seocho Electronics', y: 0 },
+    { x: 'Stephenson Tech', y: 0 },
+    { x: 'Tetratronic', y: 0 },
+    { x: 'Zetatech', y: 3 },
+  ],
+  [
+    { x: 'Arasaka', y: 2 },
+    { x: 'BioDyne', y: 6 },
+    { x: 'Biotech Σ', y: 3 },
+    { x: 'Dylanar', y: 4 },
+    { x: 'Fuyutsuki', y: 2 },
+    { x: 'Militech', y: 3 },
+    { x: 'Moore Tech', y: 3 },
+    { x: 'NetWatch', y: 1 },
+    { x: 'QianT', y: 2 },
+    { x: 'Raven MicroCyber', y: 2 },
+    { x: 'Seocho Electronics', y: 2 },
+    { x: 'Stephenson Tech', y: 3 },
+    { x: 'Tetratronic', y: 4 },
+    { x: 'Zetatech', y: 5 },
   ],
 ];
 export const dropdownData = [
@@ -3095,7 +3082,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[0],
     xName: 'x',
     yName: 'y',
-    name: 'Germany',
+    name: 'Berserk',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -3103,7 +3090,7 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[1],
     xName: 'x',
     yName: 'y',
-    name: 'England',
+    name: 'Cyberdeck',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },
@@ -3111,7 +3098,15 @@ export const lineCustomSeries = [
   { dataSource: lineChartData[2],
     xName: 'x',
     yName: 'y',
-    name: 'India',
+    name: 'Sandevistan',
+    width: '2',
+    marker: { visible: true, width: 10, height: 10 },
+    type: 'Line' },
+
+  { dataSource: lineChartData[3],
+    xName: 'x',
+    yName: 'y',
+    name: 'Sumatoria',
     width: '2',
     marker: { visible: true, width: 10, height: 10 },
     type: 'Line' },

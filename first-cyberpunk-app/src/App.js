@@ -4,22 +4,13 @@ import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { Navbar, Footer, Sidebar, ThemeSettings } from "./components";
 import {
-  Ecommerce,
-  Orders,
-  Calendar,
-  Employees,
-  Stacked,
-  Pyramid,
-  Customers,
-  Kanban,
-  Area,
-  Bar,
-  Pie,
-  Financial,
-  Line,
-  ColorPicker,
-  ColorMapping,
-  Editor,
+  Homepage,
+  Berserk,
+  Cyberdeck,
+  Sandevistan,
+  Rarity,
+  Manufacturer,
+  Comparison,
 } from "./pages";
 import "./App.css";
 import { useStateContext } from "./contexts/ContextProvider";
@@ -70,30 +61,16 @@ const App = () => {
               <Navbar/>
             </div>
             <Routes>
-              {/* Dashboard*/}
-              <Route path="/" element={<Ecommerce />} />
-              <Route path="/ECommerce" element={<Ecommerce />} />
-
-              {/* Pages*/}
-              <Route path="/orders" element={<Orders />} />
-              <Route path="/employees" element={<Employees/>} /> 
-              <Route path="/customers" element={<Customers/>} />
-
-              {/* Apps*/}
-              <Route path="/kanban" element={<Kanban />} />
-              <Route path="/editor" element={<Editor />} />
-              <Route path="/calendar" element={<Calendar />} />
-              <Route path="/color-picker" element={<ColorPicker />} />
+              {/* Tables*/}
+              <Route path="/" element={<Homepage />} />
+              <Route path="/Berserk" element={<Berserk />} />
+              <Route path="/Cyberdeck" element={<Cyberdeck />} />
+              <Route path="/Sandevistan" element={<Sandevistan />} />
 
               {/*Charts */}
-              <Route path="/line" element={<Line />} />
-              <Route path="/area" element={<Area />} />
-              <Route path="/bar" element={<Bar />} />
-              <Route path="/pie" element={<Pie />} />
-              <Route path="/financial" element={<Financial />} />
-              <Route path="/color-mapping" element={<ColorMapping />} />
-              <Route path="/pyramid" element={<Pyramid />} />
-              <Route path="/stacked" element={<Stacked />} />
+              <Route path="/Manufactura" element={<Manufacturer />} />
+              <Route path="/Rareza" element={<Rarity />} />
+              <Route path="/Comparativa" element={<Comparison />} />
             </Routes>
           </div>
         </div>
