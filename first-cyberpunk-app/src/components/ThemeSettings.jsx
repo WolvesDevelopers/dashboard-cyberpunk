@@ -32,14 +32,14 @@ const ThemeSettings = () => {
               type="radio"
               id="light"
               name="theme"
-              value="Claro"
+              value="Light"
               className="cursor-pointer"
               onChange={setMode}
               checked={currentMode === 'Light'}
             />
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="light" className="ml-2 text-md cursor-pointer">
-              Light
+              Claro
             </label>
           </div>
           <div className="mt-2">
@@ -47,19 +47,19 @@ const ThemeSettings = () => {
               type="radio"
               id="dark"
               name="theme"
-              value="Oscuro"
+              value="Dark"
               onChange={setMode}
               className="cursor-pointer"
               checked={currentMode === 'Dark'}
             />
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="dark" className="ml-2 text-md cursor-pointer">
-              Dark
+              Oscuro
             </label>
           </div>
         </div>
         <div className="p-4 border-t-1 border-color ml-4">
-          <p className="font-semibold text-xl ">Temas de colores</p>
+          <p className="font-semibold text-xl ">Colores de tema</p>
           <div className="flex gap-3">
             {themeColors.map((item, index) => (
               <TooltipComponent key={index} content={item.name} position="TopCenter">
