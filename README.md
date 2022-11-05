@@ -1,2 +1,3 @@
 # dashboard-cyberpunk
-primer intento de crear un dashboard de edgerunners
+💻 Laboratorio II - Asignación Dashboard
+Dashboard con tematica de Cyberpunk 2077 
