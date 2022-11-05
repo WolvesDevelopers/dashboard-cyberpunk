@@ -1,9 +1,9 @@
 import React from 'react'
-import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, 
-  ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject
+import {
+  GridComponent, ColumnsDirective, ColumnDirective, Page, Search, Inject, Toolbar
 } from '@syncfusion/ej2-react-grids'
 
-import { berserkData, contextMenuItems, berserkGrid } from '../data/dummy'
+import { berserkData, berserkGrid } from '../data/dummy'
 import { Header } from '../components'
 
 
@@ -11,21 +11,25 @@ const Berserk = () => {
   return (
     <div className="m-2 md:10 p-2 md:p-10
     bg-white rounded-3xl">
-      <Header category = "Pagina" title = "Berserk" subt="Lista de Sistemas Operativos de Berserk" />
+      <Header category="Tabla de Datos" title="Berserk" subt="Lista de Sistemas Operativos de Berserk" />
       <GridComponent
-        id = "gridComp"
-        dataSource={berserkData}
-        allowPaging
+          dataSource={berserkData}
+          allowPaging
+          allowSorting
+          toolbar = {['Search']}
+          width ="auto"
+          pageSettings={{pageSize:5}}
+
       >
-        
+
         <ColumnsDirective>
-          {berserkGrid.map((item, index)=> (
-            <ColumnDirective key= {index}
-            {...item} />
+          {berserkGrid.map((item, index) => (
+            <ColumnDirective key={index}
+              {...item} />
           ))}
 
         </ColumnsDirective>
-        
+        <Inject services={[Page,Toolbar, Search]} />
       </GridComponent>
 
 

@@ -1,34 +1,41 @@
 import React from 'react'
-import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, 
-  ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject
+import {
+  GridComponent, ColumnsDirective, ColumnDirective, Search, Page,Toolbar, Inject
 } from '@syncfusion/ej2-react-grids'
 
-import { sandevistanData, contextMenuItems, sandevistanGrid } from '../data/dummy'
+import { sandevistanData, sandevistanGrid } from '../data/dummy'
 import { Header } from '../components'
 
 
 const Sandevistan = () => {
-  
-  
+
+
   return (
     <div className="m-2 md:10 p-2 md:p-10
     bg-white rounded-3xl">
-      <Header category = "Pagina" title = "Sandevistan" subt="Lista de Sistemas Operativos de Sandevistan" />
+      <Header category="Tabla de Datos" title="Sandevistan" subt="Lista de Sistemas Operativos de Sandevistan" />
       <GridComponent
-            id = "gridComp"
-            dataSource={sandevistanData}
-            allowPaging
-          >
+        id="gridComp"
+        dataSource={sandevistanData}
+        allowPaging
+        allowSorting
+        toolbar = {['Search']}
+        width ="auto"
+        pageSettings={{pageSize:5}}
+
+
+      >
         <ColumnsDirective>
-          {sandevistanGrid.map((item, index)=> (
-            <ColumnDirective key= {index}
-            {...item} />
+          {sandevistanGrid.map((item, index) => (
+            <ColumnDirective key={index}
+              {...item} />
           ))}
 
         </ColumnsDirective>
       </GridComponent>
+      <Inject services={[Page,Search, Toolbar,]} />
     </div>
   )
-}  
+}
 
 export default Sandevistan
