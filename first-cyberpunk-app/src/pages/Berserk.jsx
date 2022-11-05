@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  GridComponent, ColumnsDirective, ColumnDirective, Page, Search, Inject, Toolbar
+  GridComponent, ColumnsDirective, ColumnDirective, Sort, Page, Search, Inject, Toolbar
 } from '@syncfusion/ej2-react-grids'
 
 import { berserkData, berserkGrid } from '../data/dummy'
@@ -29,7 +29,7 @@ const Berserk = () => {
           ))}
 
         </ColumnsDirective>
-        <Inject services={[Page,Toolbar, Search]} />
+        <Inject services={[Page,Toolbar, Sort , Search]} />
       </GridComponent>
 
 

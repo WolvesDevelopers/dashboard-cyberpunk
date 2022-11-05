@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  GridComponent, ColumnsDirective, ColumnDirective, Search, Page,Toolbar, Inject
+  GridComponent, ColumnsDirective, ColumnDirective, Search, Sort,Page,Toolbar, Inject
 } from '@syncfusion/ej2-react-grids'
 
 import { sandevistanData, sandevistanGrid } from '../data/dummy'
@@ -33,7 +33,7 @@ const Sandevistan = () => {
 
         </ColumnsDirective>
       </GridComponent>
-      <Inject services={[Page,Search, Toolbar,]} />
+      <Inject services={[Page,Search, Sort, Toolbar,]} />
     </div>
   )
 }

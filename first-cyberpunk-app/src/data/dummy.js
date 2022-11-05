@@ -96,15 +96,15 @@ export const links = [
     links: [
       {
         name: "Berserk",
-        icon: <BerserkIcon className="flex space-x-2 w-12 h-12" />,
+        icon: <BerserkIcon className="contrast-0 flex space-x-2 w-12 h-12 " />,
       },
       {
         name: "Cyberdeck",
-        icon: <CyberdeckIcon className="flex space-x-2 w-12 h-12" />,
+        icon: <CyberdeckIcon className="contrast-0 flex space-x-2 w-12 h-12" />,
       },
       {
         name: "Sandevistan",
-        icon: <SandevistanIcon className="flex space-x-2 w-12 h-12" />,
+        icon: <SandevistanIcon className="contrast-0 flex space-x-2 w-12 h-12" />,
       },
     ],
   },
@@ -113,15 +113,15 @@ export const links = [
     links: [
       {
         name: "Rareza",
-        icon: <AiOutlineBarChart className="flex space-x-2 w-12 h-12" />,
+        icon: <AiOutlineBarChart className="contrast-0 flex space-x-2 w-12 h-12" />,
       },
       {
         name: "Manufactura",
-        icon: <AiOutlineStock className="flex space-x-2 w-12 h-12" />,
+        icon: <AiOutlineStock className="contrast-0 flex space-x-2 w-12 h-12" />,
       },
       {
         name: "Tipo",
-        icon: <FiPieChart className="flex space-x-2 w-12 h-12" />,
+        icon: <FiPieChart className="contrast-0 flex space-x-2 w-12 h-12" />,
       },
     ],
   },
@@ -129,29 +129,39 @@ export const links = [
 
 export const themeColors = [
   {
-    name: "blue-theme",
+    name: "Verde",
+    color: "#86DC3D",
+  },
+  {
+    name: "Azul",
     color: "#1A97F5",
+  },  
+  {
+    name: "Amarillo",
+    color: "#FCEE0C",
   },
   {
-    name: "green-theme",
-    color: "#03C9D7",
+    name: "Celeste",
+    color: "#03D8F3",
   },
   {
-    name: "purple-theme",
+    name: "Violeta",
     color: "#7352FF",
   },
   {
-    name: "red-theme",
+    name: "Rosa",
     color: "#FF5C8E",
   },
   {
-    name: "indigo-theme",
+    name: "Indigo",
     color: "#1E4DB7",
   },
   {
+    name: "Durazno",
     color: "#FB9678",
-    name: "orange-theme",
   },
+  
+  
 ];
 
 export const berserkGrid = [

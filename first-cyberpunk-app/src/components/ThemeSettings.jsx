@@ -25,7 +25,7 @@ const ThemeSettings = () => {
 
         </div>
         <div className="flex-col border-t-1 border-color p-4 ml-4">
-          <p className="font-semibold text-xl ">Opciones de temas</p>
+          <p className="font-semibold text-xl ">Tema</p>
 
           <div className="mt-4">
             <input
@@ -39,7 +39,7 @@ const ThemeSettings = () => {
             />
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="light" className="ml-2 text-md cursor-pointer">
-              Claro
+              Modo Claro
             </label>
           </div>
           <div className="mt-2">
@@ -54,13 +54,13 @@ const ThemeSettings = () => {
             />
             {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="dark" className="ml-2 text-md cursor-pointer">
-              Oscuro
+              Modo Oscuro
             </label>
           </div>
         </div>
         <div className="p-4 border-t-1 border-color ml-4">
-          <p className="font-semibold text-xl ">Colores de tema</p>
-          <div className="flex gap-3">
+          <p className="font-semibold text-xl ">Color de acentuación</p>
+          <div className="flex flex-wrap gap-3">
             {themeColors.map((item, index) => (
               <TooltipComponent key={index} content={item.name} position="TopCenter">
                 <div

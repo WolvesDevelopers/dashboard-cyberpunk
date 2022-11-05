@@ -13,7 +13,7 @@ const LineChart = () => {
       primaryYAxis={LinePrimaryYAxis}
       //chartArea={{ border: { width: 0 } }} //Currently using border
       tooltip={{ enable: true }}
-      background={currentMode === 'Dark' ? '#33373E' : '#fff'}
+      background='white' //{currentMode === 'Dark' ? '#33373E' : '#fff'} //for dynamic background
       legendSettings={{ background: 'white' }}
     >
       <Inject services={[LineSeries, Category, Legend, Tooltip]} />

@@ -2,7 +2,7 @@ import React from 'react'
 
 import {
   GridComponent, ColumnsDirective, ColumnDirective,
-  Page, Search, Inject, Toolbar
+  Page, Search, Inject, Toolbar, Sort
 } from '@syncfusion/ej2-react-grids'
 
 import { cyberdeckData,cyberdeckGrid } from '../data/dummy'
@@ -32,7 +32,7 @@ const Cyberdeck = () => {
 
           </ColumnsDirective>
         </GridComponent>
-        <Inject services={[Page, Search, Toolbar]} />
+        <Inject services={[Page, Search, Toolbar,Sort]} />
 
       </div>
 
