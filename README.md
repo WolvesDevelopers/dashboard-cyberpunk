@@ -3,4 +3,4 @@
 
 
 
-🦾 Dashboard con temática de Cyberpunk 2077 y con homenaje a la serie Cyberpunk Edgerunners.
+Dashboard con temática de Cyberpunk 2077 y con homenaje a la serie Cyberpunk Edgerunners.
